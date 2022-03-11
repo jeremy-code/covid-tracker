@@ -1,6 +1,7 @@
 .footer {
   border-top: 0.1pt solid #a0aec0;
   width: 100%;
+  flex-shrink: 0;
 }
 
 .text {

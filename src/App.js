@@ -25,26 +25,25 @@ class App extends React.Component {
 
     return (
       <div className={styles.container}>
-        <Navbar />
-
-        <div className={styles.panel}>
-          <div className={styles.cards}>
-            <Cards data={data} />
+        <div className={styles.content}>
+          <Navbar />
+          <div className={styles.panel}>
+            <div className={styles.cards}>
+              <Cards data={data} />
+            </div>
+          </div>
+          <div className={styles.graphCard}>
+            <div className={styles.title}>
+              <h1> Graph </h1>
+            </div>
+            <div className={styles.countryPicker}>
+              <CountryPicker handleCountryChange={this.handleCountryChange} />{" "}
+            </div>
+            <div className={styles.graph}>
+              <Chart data={data} country={country} />
+            </div>
           </div>
         </div>
-
-        <div className={styles.graphCard}>
-          <div className={styles.title}>
-            <h1> Graph </h1>
-          </div>
-          <div className={styles.countryPicker}>
-            <CountryPicker handleCountryChange={this.handleCountryChange} />{" "}
-          </div>
-          <div className={styles.graph}>
-            <Chart data={data} country={country} />
-          </div>
-        </div>
-
         <Footer />
       </div>
     );
