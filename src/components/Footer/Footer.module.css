@@ -2,6 +2,8 @@
   border-top: 0.1pt solid #a0aec0;
   width: 100%;
   flex-shrink: 0;
+  text-align: center;
+  padding: 1.35rem 0;
 }
 
 .text {
@@ -9,12 +11,15 @@
   text-align: center;
   color: #4a5568;
   padding-top: 5px;
+  display: inline;
 }
 
 a {
   color: #43aaa8;
   text-decoration: none;
   border-bottom: 1px solid #43aaa8;
+  transition: all 0.2s ease-in-out;
+  padding: 2px;
 }
 
 a:hover {

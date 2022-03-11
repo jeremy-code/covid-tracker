@@ -37,6 +37,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
       options={{
         legend: { display: false },
         title: { display: true, text: `Current state in ${country}` },
+        responsive: true,
       }}
     />
   ) : null;
@@ -60,6 +61,10 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
             fill: true,
           },
         ],
+      }}
+      options={{
+        title: { display: true, text: `Current Global COVID-19 Statistics` },
+        responsive: true,
       }}
     />
   ) : null;

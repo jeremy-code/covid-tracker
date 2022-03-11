@@ -33,12 +33,10 @@ class App extends React.Component {
             </div>
           </div>
           <div className={styles.graphCard}>
-            <div className={styles.title}>
-              <h1> Graph </h1>
+            <div className={styles.heading}>
+              <h1 >Graph</h1>
             </div>
-            <div className={styles.countryPicker}>
-              <CountryPicker handleCountryChange={this.handleCountryChange} />{" "}
-            </div>
+            <CountryPicker handleCountryChange={this.handleCountryChange} />{" "}
             <div className={styles.graph}>
               <Chart data={data} country={country} />
             </div>
