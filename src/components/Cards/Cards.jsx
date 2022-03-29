@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Typography } from "@material-ui/core";
+import { Card, Typography } from "@mui/material";
 import CountUp from "react-countup";
 
 import styles from "./Cards.module.css";

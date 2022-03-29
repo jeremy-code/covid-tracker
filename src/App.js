@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { CssBaseline } from "@material-ui/core";
+import { CssBaseline } from "@mui/material";
 
 import "./App.css";
 import { Navbar, Footer, ChartCard, DataDisplay } from "./components";

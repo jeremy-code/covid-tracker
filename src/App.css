@@ -9,7 +9,7 @@ body,
 }
 
 body {
-  background-color: #eaeff6;
+  background-color: #eaeff6 !important;
 }
 
 #root {

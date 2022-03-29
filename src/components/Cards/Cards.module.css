@@ -23,6 +23,7 @@
   text-transform: uppercase;
   color: #718096;
   letter-spacing: 2px !important;
+  margin-bottom: 0.5rem !important;
 }
 
 @media (max-width: 992px) {
