@@ -17,8 +17,8 @@ const Countries = ({ handleCountryChange }) => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <p>select country</p>
+    <>
+      <p style={{marginBottom: "0.5rem"}}>select country</p>
       <FormControl className={styles.formControl}>
         <NativeSelect
           defaultValue=""
@@ -32,7 +32,7 @@ const Countries = ({ handleCountryChange }) => {
           ))}
         </NativeSelect>
       </FormControl>
-    </div>
+    </>
   );
 };
 

@@ -1,51 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { CssBaseline } from "@material-ui/core";
 
-import { Cards, Chart, CountryPicker, Navbar, Footer } from "./components";
-import styles from "./App.module.css";
+import "./App.css";
+import { Navbar, Footer, ChartCard, DataDisplay } from "./components";
 import { fetchData } from "./api";
 
-class App extends React.Component {
-  state = {
-    data: {},
-    country: "",
-  };
+const App = () => {
+  const [data, setData] = useState({});
 
-  async componentDidMount() {
-    const fetchedData = await fetchData();
-    this.setState({ data: fetchedData });
-  }
+  useEffect(() => {
+    const fetchAPI = async () => {
+      setData(await fetchData());
+    };
+    fetchAPI();
+  }, []);
 
-  handleCountryChange = async (country) => {
-    const fetchedData = await fetchData(country);
-    this.setState({ data: fetchedData, country: country });
-  };
-
-  render() {
-    const { data, country } = this.state;
-
-    return (
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <Navbar />
-          <div className={styles.panel}>
-            <div className={styles.cards}>
-              <Cards data={data} />
-            </div>
-          </div>
-          <div className={styles.graphCard}>
-            <div className={styles.heading}>
-              <h1 >Graph</h1>
-            </div>
-            <CountryPicker handleCountryChange={this.handleCountryChange} />{" "}
-            <div className={styles.graph}>
-              <Chart data={data} country={country} />
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-}
+  return (
+    <>
+      <section>
+        <CssBaseline />
+        <Navbar />
+        <main className="container">
+          <DataDisplay data={data} />
+          <ChartCard data={data} setData={setData} />
+        </main>
+      </section>
+      <Footer />
+    </>
+  );
+};
 
 export default App;

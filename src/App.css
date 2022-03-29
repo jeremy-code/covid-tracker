@@ -1,0 +1,32 @@
+* {
+  font-family: Poppins, sans-serif !important;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: #eaeff6;
+}
+
+#root {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+p {
+  color: #718096;
+}
+
+::selection {
+  background-color: #43aaa8;
+  color: #fff;
+}
+
+.container {
+  padding-block: 2rem;
+}

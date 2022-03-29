@@ -1,55 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-inline: auto;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  margin-top: 2rem;
+}
+
 .card {
   box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2) !important;
   text-align: center;
-  height: 200px;
   border-radius: 10px !important;
   width: clamp(15rem, 20vw, 30rem);
+  padding-block: 2.5rem;
+}
+
+.card:not(:last-child) {
+  margin-right: 2rem;
 }
 
 .heading {
   text-transform: uppercase;
   color: #718096;
   letter-spacing: 2px !important;
-  font-size: 14px !important;
-  margin-top: 1rem !important;
 }
 
-.count {
-  margin-top: 0.7rem !important;
-  font-size: 2rem !important;
-}
-
-.date {
-  margin-top: 1.5rem !important;
-  color: #718096;
-}
-
-.infected {
-  border-bottom: 10px solid #5a67d8;
-}
-
-.recovered {
-  border-bottom: 10px solid #48bb78;
-}
-
-.deaths {
-  border-bottom: 10px solid #e53e3e;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-@media (max-width: 1040px) {
+@media (max-width: 992px) {
   .container {
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    margin-top: 0;
   }
+
   .card {
-    width: calc(100% - 2rem);
-    margin: 0 auto;
-    margin-bottom: 2rem !important;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .card:not(:last-child) {
+    margin-bottom: 1rem;
   }
 }
